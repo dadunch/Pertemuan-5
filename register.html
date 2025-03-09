@@ -3,48 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Register Page</title>
     <style>
-        input{
-            height: 40px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #243642 0%, #1a2930 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .register-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            max-width: 90%;
+        }
+        
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .register-header h1 {
+            color: #243642;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .register-header p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            border-color: #ffb30b;
+            outline: none;
+        }
+        
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+        
+        .submit-btn {
+            background-color: #ffb30b;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e69f00;
+        }
+        
+        .register-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .register-footer a {
+            color: #ffb30b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .register-footer a:hover {
+            color: #e69f00;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <center>
-    <form action="index.html" method="post">
-        <table>
-            <tr>
-                <td><label for="nama">Username</label></td>
-                <td>:</td>
-                <td><input type="text" name="username" id="nama" placeholder="Masukkan Username" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password</label></td>
-                <td>:</td>
-                <td><input type="password" name="password" id="password" placeholder="Masukkan Password"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Konfirmasi Password</label></td>
-                <td>:</td>
-                <td><input type="password" name="password" id="password" placeholder="Masukkan Konfirmasi Password"></td>
-            <tr>
-                <td>Pas Foto</td>
-                <td></td>
-                <td><input type="file" name="foto" id="foto"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td colspan="2"><button type="submit">Daftar</button></td>
-            </tr>
-            <tr>
-                <td colspan="2"><p>Sudah Punya akun?</p></td>
-                <td>
-                    <a href="index.html">Login</a>
-                </td>
-            </tr>
-        </table>
-    </form>
-    </center>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Create Account</h1>
+            <p>Join us by creating an account</p>
+        </div>
+        
+        <form action="index.html" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="foto">Upload Profile Picture</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+            
+            <button type="submit" class="submit-btn">Register</button>
+            
+            <div class="register-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
