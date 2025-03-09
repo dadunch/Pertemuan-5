@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar flex</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            background-color: #000;
+        }
+        .navbvar {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 0 150px;
+        }
+        .navbvar a {
+            font-size: large;
+            text-decoration: none;
+            color: white;
+            padding: 18px;
+        }
+        .navbvar a:hover {
+            background-color:rgb(233, 233, 233);
+            color: black;
+        }
+       
+        .content{
+            padding: 0 10vh 0 10vh;
+            display: flex;
+            justify-content: center;
+            /* background-color: white; */
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .content img{
+            width: 40vh;
+            height: 50vh;
+            object-fit: cover;
+            border-radius: 5%;
+            margin: 5px;
+        }
+        .content2{
+            background-color: #fff;
+            gap: 5%;
+
+        }
+        .content2 img{
+            width: auto;
+            height: 30vh;
+            object-fit: cover;
+            margin: 5px;
+            border-radius: 50%;
+        }
+        .music{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #000;
+        }
+        .music p{
+            font-size: 25px;
+            font-weight: bold;
+            color: #243642;
+        }
+        .navbvar-container{
+            display: flex;
+            justify-content: space-between;
+            background-color: #243642;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+            padding: 7px;
+            margin: 0;
+            position: fixed; /* Membuat navbar tetap */
+            top: 0; /* Posisi dari atas */
+            z-index: 1000; /* Memastikan navbar berada di atas konten lain */
+            box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
+        }
+        .logo {
+            color: #ffb30b; 
+            font-size: 43px; 
+            margin: 0; 
+            padding: 0; 
+            font-weight: 700;
+        }
+        .jumbotron {
+            background-color: #243642;
+            color: white;
+            padding: 10vh;
+            text-align: center;
+        }
+
+        
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: white;
+            padding: 40px 100px;
+            min-height: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 80px; /* Menambahkan margin atas untuk kompensasi navbar fixed */
+        }
+        
+        .hero-text {
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        .hero-image {
+            width: 150px;
+            height: 150px;
+            /* overflow: hidden; */
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .profile-text {
+            font-style: italic;
+        }
+        .hero-right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero-image img:hover{
+            transform: rotate(15deg) scale(1.2);
+        }
+        .header-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding-top: 2vh;
+            text-align: center;
+            font-size: larger;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbvar-container">
+        <div class="navbvar">
+            <p class="logo">Dadungg</p>
+        </div>
+        <div class="navbvar">
+            <a href="#hero">Home</a>
+            <a href="#">Product</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    <div class="hero-section" id="hero">
+        <div class="hero-text">
+            <p>Dadungg adalah hewan mamalia khas Australia yang termasuk dalam keluarga Macropodidae. Nama "ddung" sering merujuk pada spesies besar seperti ddung merah (<span class="profile-text">Macropus rufus</span>), ddung abu-abu timur (<span class="profile-text">Macropus giganteus</span>), dan ddung abu-abu barat (<span class="profile-text">Macropus fuliginosus</span>).</p>
+        </div>
+        <div class="hero-right">
+            <h1>Welcome to my Profile</h1>
+            <div class="hero-image">
+                <img src="https://framerusercontent.com/images/Zw5lWI0rVSpGGSgYX51M7tZ3tps.jpg?scale-down-to=512" alt="Profile picture">
+            </div>
+        </div>
+    </div>
+    <div class="content" style="padding-bottom: 100px;">
+        <div class="header-content" style="width: 100%;">
+            <h1>
+                Dream car
+            </h1>
+        </div>
+        <img src="https://images-porsche.imgix.net/-/media/BCE0DDD35E7E4D9CA16F7DA7480B8E92_76B645B61F5244E08438DFDD4F360BF6_BX24I3HOX0040_desktop?iar=0&w=999&ar=3%3A4&q=85&auto=format" alt="">
+        <img src="https://asset.kompas.com/crops/oTWYt2gbNzvQrvIMK4e4seApars=/0x106:640x532/750x500/data/photo/2024/01/11/659f5d32c2f52.jpg" alt="" srcset="">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2021-lamborghini-huraca-n-sto-165-1628181801.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*" alt="" srcset="">
+        <img src="https://r44performance.com/cdn/shop/files/Adro-Inc-BMW-G80-M3-G82-M4-Carbon-Fibre-Front-Splitter-6.jpg?v=1733830819&width=1500" alt="" srcset="">
+    </div>
+    <div class="content content2" style="padding-bottom: 80px;">
+        <div class="header-content" style="width: 100%; color: #ffb30b;">
+            <h1>
+                Fav Music
+            </h1>
+        </div>
+        <div class="music">
+            <img src="https://i.scdn.co/image/ab6761610000e5ebfc58f42abb126bbe177239cf" alt="" srcset="">
+            <p class="nama-musik">Payung Teduh</p>
+        </div>
+        <div class="music">
+           <img style="" src="https://furband.co.uk/wp-content/uploads/2020/02/Fur-logo-for-website-copy.jpg" alt="" srcset="">
+            <p>Fur</p>
+        </div>
+        <div class="music">
+            <img src="https://pbs.twimg.com/media/EJRB-bDVAAE3aUA.jpg" alt="" srcset="">
+            <p>Reality Club</p>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer" style="background-color: #243642; color: white; padding: 10px; text-align: center;">
+        <p>&copy; 2025 Dadungg</p>
+    </div>
+</body>
+</html>

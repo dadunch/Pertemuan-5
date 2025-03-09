@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        input{
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form action="index.html" method="post">
+        <table>
+            <tr>
+                <td><label for="nama">Username</label></td>
+                <td>:</td>
+                <td><input type="text" name="username" id="nama" placeholder="Masukkan Username" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td>:</td>
+                <td><input type="password" name="password" id="password" placeholder="Masukkan Password"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Konfirmasi Password</label></td>
+                <td>:</td>
+                <td><input type="password" name="password" id="password" placeholder="Masukkan Konfirmasi Password"></td>
+            <tr>
+                <td>Pas Foto</td>
+                <td></td>
+                <td><input type="file" name="foto" id="foto"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><button type="submit">Daftar</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p>Sudah Punya akun?</p></td>
+                <td>
+                    <a href="index.html">Login</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </center>
+</body>
+</html>
